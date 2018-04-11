@@ -2,96 +2,112 @@
 <html>
   <head>
     <title>Bitcoin!</title>
+    <style>
+    body {
+      font-family: Helvetica;
+    }
+
+    #colored {
+      background-color: #fff7e6;
+      padding: 20px;
+    }
+
+    #not_colored {
+      padding: 20px;
+    }
+    </style>
   </head>
   <body>
-    <h1 align="center">ca$h money presents. . . Bitcoin! </h1>
-    <h3> Some Basics! </h3>
-    <p>
-      <li>The first decentralized digital currency (cryptocurrency) ever created
-<li>Transactions occur between two parties directly, without an intermediary such as a bank
-<li>Created in 2009 by pseudonymous software developer going by the name Satoshi Nakamoto
-<li>Released as an open-source software
-<li>Meant to create a system of exchange that could bypass any type of central authority
+    <p align="center">ca$h money presents. . . </p>
+    <center><img src="https://bitcoin.org/img/icons/opengraph.png" width="10%"></center>
+    <h1 align="center">Bitcoin! </h1><br>
 
-    </p>
+    <div id="colored">
+      <h3>What is Bitcoin?</h3>
+      <p>
+        <li>The first decentralized digital currency (cryptocurrency) ever created</li>
+        <li>Transactions occur between two parties directly, without an intermediary such as a bank</li>
+        <li>Created in 2009 by pseudonymous software developer going by the name Satoshi Nakamoto</li>
+        <li>Released as an open-source software</li>
+        <li>Meant to create a system of exchange that could bypass any type of central authority</li>
+      </p>
+    </div>
     <br><br>
 
-          <table>
-            <tr>
-              <th>Bitcoin </th>
-              <th>vs.</th>
-              <th>Ca$h Money</th>
-            </tr>
-            <tr>
-              <td>decentralized<br>
-                but! Bitcoin can be exchanged like tradiitonal fiat currency.
-              </td>
-              <td></td>
-              <td>centralized</td>
-            </tr>
-            <tr>
-              <td>finite<br>
-                  The system is designed to top out at 21 million bitcoin at the maximum. <br>
-                At that point, bitcoin will stop being released
-              </td>
-              <td></td>
-              <td>infinite</td>
-            </tr>
-            <tr>
-              <td>anonymous users<br>
-                Exchanges with bitcoin are recorded with wallet IDs.
-              </td>
-              <td></td>
-              <td>nonanonymous users</td>
-            </tr>
-            <tr>
-              <td>can be divided to the one millionth (1 satoshi)</td>
-              <td></td>
-              <td>can be divided to the one hundredth (1 penny)</td>
-            </tr>
-          </table>
+    <div id="not_colored">
+      <table>
+        <tr>
+          <th>Bitcoin </th>
+          <th>vs.</th>
+          <th>Ca$h Money</th>
+        </tr>
+        <tr>
+          <td><p>
+          <li>Decentralized</li>
+          <li><b>BUT!</b> Bitcoin can be exchanged like tradiitonal fiat currency.</li>
+          <li>Finite</li>
+          <li>The system is designed to top out at 21 million bitcoin at the maximum. </li>
+            At that point, bitcoin will stop being released</li>
+          <li>Anonymous users (Exchanges with bitcoin are recorded with wallet IDs.)</li>
+          <li>Can be divided to the one millionth (1 satoshi)</li>
+        </p></td>
+          <td></td>
+          <td><p>
+            <li>Centralized</li>
+            <li>Infinite</li>
+            <li>Nonanonymous users</li>
+            <li>Can be divided to the one hundredth (1 penny)</li><br><br><br>
+          </p></td>
+        </tr>
+      </table>
+    </div>
+    <div id="colored">
+      <h3> So why do people use bitcoin?</h3>
+      <p><li>Distrust of banks to keep their money secure</li>
+        <li>Many have more faith in Bitcoin's blockchain system.</li>
+        <li>The Blockchain & verification process makes it extremely difficult for counterfeiting to occur.</li>
+        <li>Some like the partial anonymity offered by Bitcoin</li>
+      </p>
+    </div>
 
-    <h3> So why do people use bitcoin?</h3>
-    <p>Distrust of banks to keep their money secure; many have more faith in Bitcoin's blockchain system. The Blockchain & verification process makes it extremely difficult for counterfeiting to occur.
-Some like the partial anonymity offered by Bitcoin (some people buy VPNs with bitcoin cryptocurrency because they're worried about legal trouble if their name is attached to the payment).
-    </p>
+    <div id="not_colored">
+    <h3> How do trasactions work? </h3>
+    <p><li>Each user has a Bitcoin wallet and a two-key address to sign transactions</li>
+    <li><i>Public key</i> --> anyone can look up, similar to e-mail address</li>
+    <li><i>Private key</i> --> used to send bitcoin, similar to e-mail password</li>
+    <li>A Bitcoin address is an identifier of 26-35 letters and numbers</li>
+    <li>Transactions are verified by network nodes through the use of cryptography</li>
+    <li>Exchanges are recorded in a shared public ledger, called blockchain</li>
+    <li>Collected in blocks, which represents an update of the user's balances on the network</li>
+    <li>Transactions are confirmed by network within 10 minutes</li></p>
+    </div>
 
-    <h2> How do trasactions work? </h2>
-    Each user has a Bitcoin wallet and a two-key address to sign transactions<br>
-Public key --> anyone can look up, similar to e-mail address<br>
-Private key --> used to send bitcoin, similar to e-mail password<br>
-A Bitcoin address is an identifier of 26-35 letters and numbers<br>
-Transactions are verified by network nodes through the use of cryptography<br>
-Exchanges are recorded in a shared public ledger, called blockchain<br>
-Collected in blocks, which represents an update of the user's balances on the network<br>
-Transactions are confirmed by network within 10 minutes<br>
+    <div id="colored">
+      <h3> Block Components</h3>
+        <li>Timestamp: The time when the block was found.</li>
+        <li> Refrence to Parent (Prev Hash): a hash of the previous block header which ties each block to its parent</li>
+        <li>Merkle Root (Tx_Root): a reduced representation of the set of transactions that is confirmed with this block<br>
+            The transactions are provided independently, and they form the body of the block<br>
+            There must be at least one transaction: The Coinbase.<br>
+              The coinbase is a special transaction that may create new bitcoins and colelcts the transactions fees</li>
+        <li>Target: corresponds to the difficulty of finding a new block. Updated every 2016 blocks when the difficulty reset occurs </li>
+        <li> The Block's Hash: all of the above items get hashedd into the block hash which, for one, is proof that the other parts of the header have not been changed, and then is used as a reference by the succeeding block</li>
+        <li> Nonce: an arbitrarily picked number to conveniently add entropy to a block header without rebuilding the Merkle tree</li>
+      </div><br>
 
-    <h2> Block Components</h2>
-      <li>Timestamp: The time when the block was found.</li>
-      <li> Refrence to Parent (Prev Hash): a hash of the previous block header which ties each block to its parent</li>
-      <li>Merkle Root (Tx_Root): a reduced representation of the set of transactions that is confirmed with this block<br>
-          The transactions are provided independently, and they form the body of the block<br>
-          There must be at least one transaction: The Coinbase.<br>
-            The coinbase is a special transaction that may create new bitcoins and colelcts the transactions fees</li>
-      <li>Target: corresponds to the difficulty of finding a new block. Updated every 2016 blocks when the difficulty reset occurs </li>
-      <li> The Block's Hash: all of the above items get hashedd into the block hash which, for one, is proof that the other parts of the header have not been changed, and then is used as a reference by the succeeding block</li>
-      <li> Nonce: an arbitrarily picked number to conveniently add entropy to a block header without rebuilding the Merkle tree</li>
-      <h1> INSERT IMAGE OF THE BLOCK</h1>
-      <h2> Blockchains! </h2>
-      Many miners compete to find the next block. Often, there will be more than one valid block discovered, but if there is a fork, only one progresses to a greater length and the shorter is discarded. The discarded blocks are called extinct or orphaned blocks.
-      <h2> Things to Note About the Blockchain!</h2>
-      <ol> <li>Everyone can start from the Genesis Block and apply each block consecutively to arrive at the same result.</li>
-      <li>When you have applied the latest block, the balances in your ledger have the exact same state as in all the other participants' ledgers.</li>
-      <li>As each block builds upon its predecessor, each new block buries the history under more work </li>
-      <li>Pretty safe!<br>
-          To change the ledger, you not only would have to harness a ton of computer power, but you'd also have to do it in very public space where thousands of other computers and users can see exactly what you're doing. <br>
-          What one person or computer does affects the entire blockchain, and everyone can police the transactions. </li>
-      </ol>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Bitcoin_Block_Data.png" width="50%" align="center"><br><br>
 
-
-
-
-
-
-
+      <div id="colored">
+        <h3> Blockchains! </h3>
+        Many miners compete to find the next block. Often, there will be more than one valid block discovered, but if there is a fork, only one progresses to a greater length and the shorter is discarded. The discarded blocks are called extinct or orphaned blocks.
+        <h3> Things to Note About the Blockchain!</h3>
+        <ol> <li>Everyone can start from the Genesis Block and apply each block consecutively to arrive at the same result.</li>
+          <li>When you have applied the latest block, the balances in your ledger have the exact same state as in all the other participants' ledgers.</li>
+          <li>As each block builds upon its predecessor, each new block buries the history under more work </li>
+          <li>Pretty safe!<br>
+          <li>To change the ledger, you not only would have to harness a ton of computer power, but you'd also have to do it in very public space where thousands of other computers and users can see exactly what you're doing. </li>
+          <li>What one person or computer does affects the entire blockchain, and everyone can police the transactions. </li>
+        </ol>
+      </div>
+  </body>
 </html>
